@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Subtitle Styler for Stremio",
+  "version": "1.0",
+  "description": "Change subtitle font and outline color in Stremio.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.stremio.com/*",
+    "*://app.strem.io/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.stremio.com/*", "*://app.strem.io/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["fonts/*"],
+      "matches": ["*://*.stremio.com/*", "*://app.strem.io/*"]
+    }
+  ],
+  "options_page": "options.html"
+}

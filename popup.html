@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subtitle Styler</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>Subtitle Styler</h1>
+
+  <label for="fontFamilySelector">Font Family:</label>
+  <select id="fontFamilySelector">
+    <option value="Rubik">Rubik</option>
+    <option value="Arial">Arial</option>
+    <option value="Verdana">Verdana</option>
+    <option value="Times New Roman">Times New Roman</option>
+  </select>
+
+  <label for="fontOutlineSlider">Font Outline Size (px):</label>
+  <input type="range" id="fontOutlineSlider" min="1" max="10" value="1">
+  <span id="fontOutlineValue">1</span>
+
+  <label for="outlineColorPicker">Outline Color:</label>
+  <input type="color" id="outlineColorPicker" value="#000000">
+
+  <label for="bottomAppSlider">Bottom Value (only for app.strem.io (%)):</label>
+  <input type="range" id="bottomAppSlider" min="0" max="20" value="7">
+  <span id="bottomAppValue">7</span>
+
+  <script src="popup.js"></script>
+</body>
+</html>
